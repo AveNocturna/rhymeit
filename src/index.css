@@ -1,0 +1,293 @@
+/*Fonts*/
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat&family=Lato:wght@100&family=Lobster&family=Satisfy&display=swap');
+
+/*General*/
+
+#root {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    background: rgb(49, 25, 109);
+    background: linear-gradient(56deg, rgba(49, 25, 109, 1) 0%, rgba(47, 133, 168, 1) 83%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50%;
+    overflow-x: hidden;
+}
+
+/*NavBar Component*/
+nav {
+    width: 100%;
+    backdrop-filter: saturate(100%) blur(500px);
+    box-shadow: 0px 0px 9px 3px rgba(41, 41, 41, .25);
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    height: 100%;
+}
+
+.NavContainer ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.NavContainer ul li {
+    margin-right: 25px;
+    height: 100%;
+    padding: 5px;
+}
+.NavContainer ul li a {
+    border-radius: 8px;
+    padding: 10px;
+    font-weight: 900;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+.activeItem,
+.NavContainer ul li a:hover {
+    background-color: white;
+    transition: 0.5s ease-in;
+    color: black !important;
+}
+
+/*Home Page*/
+
+#logo {
+    width: 80px;
+    /* margin: 0 auto;*/
+}
+.logoContainer {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logoContainer h2 {
+    color: white;
+}
+.main_Container {
+    width: 100%;
+    min-width: 209px;
+    display: flex;
+    flex-direction: column;
+}
+.homeContainer {
+    margin: 0 auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /*backdrop-filter: saturate(100%) blur(500px);*/
+    padding: 25px;
+    border-radius: 8px;
+    min-width: 209px;
+    max-width: 900px;
+    min-height: 700px;
+    border: solid 2px white;
+}
+/*Search component*/
+.SearchContainer {
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.SearchContainer label {
+    margin-bottom: 20px;
+    font-size: 45px;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
+.SearchContainer input,
+.SearchContainer button {
+    height: 40px;
+    border: solid white 2px;
+}
+.SearchContainer input {
+    width: 88%;
+    font-size: 30px;
+    color: black;
+    border-radius: 8px;
+    background-color: white;
+    font-weight: 800;
+}
+.validation_Message {
+    font-size: 25px !important;
+    color: white !important;
+    text-align: start !important;
+    display: none;
+}
+.active_Message {
+    display: block;
+}
+.SearchContainer input:focus {
+    outline: none;
+}
+.SearchContainer button {
+    width: 10%;
+    background-color: transparent;
+    border-radius: 8px;
+    color: white;
+    font-size: 19px;
+    cursor: pointer;
+    color: white;
+}
+.SearchContainer button:hover {
+    background-color: white;
+    color: black;
+    transition: 0.5s ease-in;
+}
+
+/*WordGrid Component*/
+.WordsGrid {
+    padding: 10px;
+    height: 380px;
+}
+.WordsGrid img {
+    margin: 0 auto;
+    display: block;
+    width: 50%;
+}
+.notFoundContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+.notFoundContainer img {
+    width: 60px;
+}
+.notFoundContainer p {
+    font-size: 25px;
+    text-align: center;
+    color: white;
+    margin-top: 15px;
+}
+/*Word Component*/
+.word {
+    border-radius: 5px;
+    background-color: white;
+    height: 60px;
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    font-weight: 700;
+}
+/*Pagination Container*/
+.paginationContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+}
+.number {
+    text-decoration: none;
+    background-color: transparent;
+    padding: 10px 20px;
+    border: 1px solid white;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    font-weight: 800;
+}
+.number:hover,
+.active {
+    background-color: white;
+    color: black;
+    transition: 0.2s ease-in-out;
+}
+
+/*About Page*/
+.aboutContainer {
+    background-color: transparent;
+    margin: auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 25px;
+    border-radius: 8px;
+    min-width: 209px;
+    max-width: 900px;
+    align-items: center;
+    border: solid 2px white;
+    min-height: 700px;
+}
+.aboutContainer h2 {
+    color: white;
+    margin-bottom: 25px;
+}
+.aboutDescription {
+    width: 80%;
+}
+.aboutDescription p,
+.aboutDescription a {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+}
+.aboutDescription a {
+    color: white;
+    font-style: normal;
+    font-family: 'Segoe UI', Roboto sans-serif;
+}
+
+/*Footer*/
+.footer {
+    min-width: 209px;
+    height: 200px;
+    backdrop-filter: saturate(100%) blur(500px);
+    box-shadow: 0px 0px 9px 3px rgba(41, 41, 41, .25);
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer p {
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+/*On smaller screens*/
+
+@media screen and (max-width:890px) {
+    /*Main container on small screens*/
+    .homeContainer,
+    .aboutContainer {
+        margin: 0 auto;
+        width: 80%;
+    }
+    /*Search component on small screens*/
+    .SearchContainer button,
+    .SearchContainer input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
